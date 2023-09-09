@@ -1,0 +1,389 @@
+/* Paramètres*/
+
+:root {
+    --color1: rgb(190, 248, 252);
+}
+
+
+/* Mise en formes generale de la page*/
+
+html body {
+    background-color: black;
+    color: #fff;
+    width: auto;
+    margin: 0px;
+    padding: 0.1%;
+}
+
+ul {
+    list-style: none;
+    padding: 0px;
+    margin: 0%;
+}
+
+a {
+    text-decoration: none;
+    color: #fff;
+}
+
+
+/**************************************30.06.2021****************************************************************/
+
+
+/*************************Cette partie est dédié a la mise en forme de l'entete**********************************/
+
+div.headerdiv {
+    width: auto;
+    background: url(imgstyle/bgheader.png) center/cover;
+    padding: 0.3% 0.8% 0% 0.8%;
+    box-shadow: 0px 5px 2px black;
+    display: grid;
+    grid-template-columns: 1fr 0.8fr;
+    grid-template-rows: 1.5fr 0.2fr;
+    grid-template-areas: "hdlg prvb" "menunav brsch";
+}
+
+p.headnamelogo {
+    /*display: inline-block;*/
+    position: relative;
+    color: rgb(190, 248, 252);
+    padding: 0%;
+    margin: 0.5%;
+    grid-area: hdlg;
+    font-size: auto;
+    background: url(imgstyle/hdlg.jpg) center/cover;
+}
+
+p.headnamelogo strong {
+    visibility: hidden;
+}
+
+div.headproverbes {
+    grid-area: prvb;
+    display: grid;
+    top: 0%;
+    right: 0%;
+    border: 3px solid rgb(21, 24, 41);
+    border-radius: 10px;
+    padding: 0.7%;
+    margin: 0.5% 0.5%;
+    /*margin-left: 50%;
+    margin-top: 0%;
+    width: 50%;*/
+    /*width: 60%;*/
+}
+
+div p.proverbe {
+    display: inline-block;
+    color: #fff;
+    position: relative;
+    right: 0%;
+    top: 0%;
+    margin: 0%;
+    text-align: right;
+    color: rgb(190, 248, 252);
+}
+
+div p.auteur {
+    display: inline-block;
+    position: relative;
+    margin-top: 0%;
+    margin-bottom: 0%;
+    /* margin-left: 60%;*/
+    margin-right: 5%;
+    text-align: right;
+    color: #fff;
+}
+
+nav.header {
+    grid-area: menunav;
+    /* display: flex;*/
+    margin: 0.5%;
+    margin-left: 0%;
+    padding: 0% 0% 0% 0%;
+    /* width: 40%;*/
+}
+
+div nav.header ul {
+    margin: 0%;
+    padding: 0% 40% 0% 0%;
+    display: flex;
+    justify-content: space-around;
+}
+
+div nav.header li {
+    color: var(--color1);
+    display: inline-block;
+    text-transform: uppercase;
+    padding: 0%;
+    align-items: center;
+    justify-content: center;
+}
+
+div nav.header li a {
+    color: var(--color1);
+}
+
+div nav.header li a:hover {
+    background-color: rgba(0, 0, 0, 0.562);
+    text-decoration: underline;
+    color: #fff;
+    width: 100%;
+}
+
+div.headerdiv div.barresearch {
+    grid-area: brsch;
+    margin: 0%;
+    margin-right: 2%;
+    margin-top: 0.8%;
+    text-align: right;
+}
+
+div.headerdiv div.barresearch form {
+    display: grid;
+    grid-template-columns: 1fr 0.5fr;
+}
+
+div.headerdiv div.barresearch form input {
+    margin: 0% 0.8%;
+    background-color: rgba(0, 0, 0, 0.377);
+    color: var(--color1);
+}
+
+div.headerdiv div.barresearch form input.btn {
+    margin: 0% 0.8%;
+    background-color: rgba(18, 94, 90, 0.208);
+    color: var(--color1);
+    border-radius: 5px;
+}
+
+
+/*************************************30.06.2021*****************************************/
+
+
+/******************Mise en forme du pied de la page**************************************/
+
+footer {
+    background: url(imgstyle/bgfooter.png) center/cover;
+}
+
+div.footerdiv {
+    display: grid;
+    grid-template-rows: 0.1fr 0.5fr 0.1fr;
+}
+
+div.footerdiv nav {
+    display: grid;
+    grid-template-columns: 45% 55%;
+    justify-content: center;
+    align-items: center;
+}
+
+div.footerdiv nav ul.contact {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+div.footerdiv nav ul.contact li {
+    margin: auto;
+}
+
+div.footerdiv p {
+    text-align: center;
+    margin: 0px;
+}
+
+div.footerdiv p.contact {
+    margin-left: -15%;
+}
+
+div.footerdiv a {
+    text-align: right;
+}
+
+
+/************************ Fin mise en page du header e du footer ********************************* 02.07.2021*  /
+/******************************Mise en page de l'aperçu d'un article***********************************************/
+
+div.articlediv {
+    background: url(imgstyle/bgarticle.png) center/cover;
+    padding: 0.5%;
+}
+
+div.articlediv section.article {
+    display: grid;
+    grid-template-columns: 1fr 0.3fr;
+    grid-template-areas: 'tit tit' 'cat cat' 'img img' 'con sug' 'fcm fcm' 'com com';
+}
+
+
+/*  remplacer le deuxième cat pour afficher le nbre des vues par vue /*
+ainsi que le deuxième con de la première serie par sug pour suggestion articles
+*/
+
+div.articlediv section.article h1 {
+    margin-bottom: 0%;
+    margin-left: 5%;
+    grid-area: tit;
+}
+
+div.articlediv section.article div.catscat {
+    margin-left: 8%;
+    color: var(--color1);
+    grid-area: cat;
+}
+
+div.articlediv section.article p.nbvue {
+    /* Espace reservé pour affiché le nbre des vues*/
+    margin: auto;
+}
+
+div.articlediv section.article p.imgart {
+    margin: 0% auto;
+    grid-area: img;
+}
+
+div.articlediv section.article div.suggestion {
+    grid-area: sug;
+    padding: 0% 1%;
+    margin: 0% 1%;
+}
+
+div.articlediv section.article div.suggestion div.boxsug {
+    margin: 1.8% 0%;
+    padding: 2%;
+    background: rgba(0, 0, 0, 0.288);
+    border: 2px solid var(--color1);
+    border-radius: 5px;
+}
+
+div.articlediv section.article div.artcontenu {
+    padding: 1%;
+    grid-area: con;
+    background-color: rgba(0, 0, 0, 0.250);
+    text-align: justify;
+}
+
+div.articlediv section.article div.artcontenu p {
+    /* Pour lesbalises p de l'article*/
+    text-align: justify;
+}
+
+div.articlediv section.article form {
+    grid-area: fcm;
+}
+
+div.articlediv aside {
+    grid-area: com;
+}
+
+div.articlediv section.article div.catscat p {
+    margin: 0%;
+    display: inline-block;
+}
+
+
+/********************* Mise en forme formulaire comentaire **********************/
+
+div.articlediv section.article form fieldset {
+    /* width: 60%;*/
+    border-radius: 10px;
+}
+
+div.articlediv section.article form fieldset div {
+    display: grid;
+    width: 100%;
+    grid-template-columns: 30% 35% 35%;
+    grid-template-rows: 0.4fr 1.65fr 0.30fr;
+    grid-template-areas: 'ps ml wb' 'com com com' 'vl vl vl';
+    padding: 0%;
+    margin: 0%;
+}
+
+div.articlediv section.article form fieldset div p.pseudo {
+    grid-area: ps;
+    margin: 0%;
+    border-radius: 5px;
+    padding: 0% 2%;
+    margin: 0% 3%;
+}
+
+div.articlediv section.article form fieldset div p.mail {
+    grid-area: ml;
+    margin: 0%;
+    border-radius: 5px;
+    padding: 0% 2%;
+    margin: 0% 3%;
+}
+
+div.articlediv section.article form fieldset div p.commentaires {
+    grid-area: com;
+    margin: 1% 0% 1% 1%;
+    width: 100%;
+    border-radius: 5px;
+    height: aut;
+}
+
+div.articlediv section.article form fieldset div p.commentaires textarea {
+    resize: none;
+    background-color: rgba(0, 0, 0, 0.356);
+    width: 98%;
+    height: 98%;
+}
+
+div.articlediv section.article form fieldset div p.site {
+    grid-area: wb;
+    margin: 0%;
+    padding: 0% 2%;
+    margin: 0% 3%;
+    border-radius: 5px;
+}
+
+div.articlediv section.article form fieldset div p.site input {
+    width: 100%;
+}
+
+div.articlediv section.article form fieldset div input {
+    grid-area: vl;
+    width: 98%;
+    border-radius: 5px;
+    background-color: rgba(0, 0, 0, 0.356);
+    margin: 1% 1% 0% 1%;
+    color: #fff;
+}
+
+::placeholder {
+    color: rgba(255, 255, 255, 0.384);
+}
+
+
+/*******************Affichage des commentaires**********************************/
+
+div.articlediv section.article aside {
+    display: grid;
+}
+
+div.articlediv section.article aside div.affcom {
+    margin: 0.1% 0.2% 0.1% 0.3%;
+    background-color: rgba(0, 0, 0, 0.356);
+    color: var(--color1);
+}
+
+div.articlediv section.article aside div.affcom p {
+    text-transform: none;
+    margin: 0%;
+}
+
+div.articlediv section.article aside div.affcom p.compseudo {
+    margin-left: 1%;
+}
+
+div.articlediv section.article aside div.affcom p.comcontenu {
+    margin: 1% 0%;
+    margin-left: 15%;
+}
+
+div.articlediv section.article aside div.affcom p.comdate {
+    margin-left: 8%;
+}
